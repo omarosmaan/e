@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eid</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="box">
+            <div class="">
+                أضحى مبارك <br> كل عام وأنتم بخير<br>Omar Osman
+            </div>
+            <div class="">
+                كل عام وأنتم بخير <br>
+            </div>
+        </div>
+
+        <script>
+            setTimeout(() => {
+                let boxs = document.querySelectorAll(".box div");
+                boxs.forEach(box =>{
+                    box.classList.add("active")
+                })
+            }, 1000);
+        </script>
+    </body>
+</html>

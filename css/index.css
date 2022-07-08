@@ -1,0 +1,59 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #021213;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: relative;
+    width: 100%;
+    font-size: 2cm;
+    /* I will add my font but you can add nay font */
+    font-family: 'MISTRAL', Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.box div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+    color: transparent;
+    background:linear-gradient(to right,transparent 50% 50% ,#15dde4 50% 50%);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-text-stroke: 1.5px #021213;
+    transition: background-position linear 5s;
+    overflow: hidden;
+}
+.box div:last-child{
+    filter: blur(15px);
+}
+.box div::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 2px;
+    height: 100%;
+    background-color: #15dde4;
+    box-shadow: 2px 0px 2px #15dde4;
+    transition: left linear 5s;
+}
+.box div.active{
+    background-position: 100% 0%;
+}
+.box div.active::after{
+    left: 0%;
+}
